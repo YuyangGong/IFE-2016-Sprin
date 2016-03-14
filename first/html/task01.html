@@ -117,26 +117,34 @@
     </table>
     <h2>这里以后是一个侧栏，这是侧栏的标题</h2>
     <h2>侧栏注册窗口标题</h2>
-    </p>
-        请输入邮箱地址: <input type="text" placeholder="这是一个文本输入框">
-    <p>
-    <p>
-        邮箱地址请按要求格式输入
-    </p>
-    <p>
-        请输入密码：<input type="password" placeholder="这是一个文本输入框"> 请重复输入密码：<input type="password" placeholder="这是一个文本输入框">
-    </p>
-    <p>
-        密码请为6-16位英文数字
-    </p>
-    性别: <label><input type="radio" name="sex" value="man" checked>男</label>
+    <form method="post" action="" name="personInfo">
+        </p>
+            请输入邮箱地址: <input type="text" placeholder="这是一个文本输入框">
+        <p>
+        <p>
+            邮箱地址请按要求格式输入
+        </p>
+        <p>
+            请输入密码：<input type="password" placeholder="这是一个文本输入框"> 请重复输入密码：<input type="password" placeholder="这是一个文本输入框">
+        </p>
+        <p>
+            密码请为6-16位英文数字
+        </p>
+            性别: <label><input type="radio" name="sex" value="man" checked>男</label>
            <label><input type="radio" name="sex" value="woman">女</label>
-    城市: <input type="text" name="city">
-    爱好: <label><input type="checkbox" name="hobby" value="sports">运动</label>&nbsp;&nbsp;
-    <label><input type="checkbox" name="hobby" value="art">艺术</label>&nbsp;&nbsp;
-    <label><input type="checkbox" name="hobby" value="science">科学</label>&nbsp;&nbsp;
-    个人描述: <textarea name="self-description" cols="20" rows="1" placeholder="这是一个多好输入框，输入您的个人描述"></textarea> <input type="submit" value="确认提交">
-    <p>
+        城市: 
+        <select>
+            <option value="beijing" selected>北京</option>
+            <option value="shanghai">上海</option>
+            <option value="guangdong">广东</option>
+            <option value="nanchang">南昌</option>
+        </select>
+        爱好: <label><input type="checkbox" name="hobby" value="sports">运动</label>&nbsp;&nbsp;  
+        <label><input type="checkbox" name="hobby" value="art">艺术</label>&nbsp;&nbsp;
+        <label><input type="checkbox" name="hobby" value="science">科学</label>&nbsp;&nbsp;
+        个人描述: <textarea name="self-description" cols="20" rows="1" placeholder="这是一个多好输入框，输入您的个人描述"></textarea> <input type="submit" value="确认提交">
+     </form>   
+     <p>
         版权所有©
     </p>
 </body>
