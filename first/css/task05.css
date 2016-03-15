@@ -20,6 +20,7 @@ body {
 	margin: 0 auto;
 	width: 95%;
 	height: 60px;
+	min-width: 320px;
 }
 .header-main img{
     position: absolute;
@@ -45,12 +46,16 @@ body {
     }
     .header-main img{
     	position: relative;
+    	top: 10px;
     	bottom: auto;
     }
     .header-main ul {
     	display: inline-block;
     	position: relative;
     	margin: 0 auto;
+    }
+    .header-main li {
+    	font-size: 11px;
     }
 }
 .header-main a:link, .header-main a:visited {
@@ -67,6 +72,11 @@ body {
 	padding: 40px 30px 20px;
 	background-color: #fff;
 	box-shadow: 3px 3px 5px #9f9f9f;
+}
+@media screen and (max-width: 640px){
+    .content-main {
+		padding: 10px 10px 10px;
+	}
 }
 .content-main h2 {
 	font-size: 21px;
