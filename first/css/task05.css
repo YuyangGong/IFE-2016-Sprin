@@ -5,15 +5,20 @@
 }
 body {
 	background-color: #dedede;
-	min-width: 1200px;
 }
 .header {
 	background-color: #333333;
 }
+.main {
+	margin-left: 2%;
+	margin-right: 460px;
+	min-width: 320px;
+}
+
 .header-main {
 	position: relative;
 	margin: 0 auto;
-	width: 1200px;
+	width: 95%;
 	height: 60px;
 }
 .header-main img{
@@ -33,6 +38,21 @@ body {
     margin: 0 15px;
     font-size: 14px;
 }
+@media screen and (max-width: 640px){
+    .header-main {
+    	height: 90px;
+    	text-align: center;
+    }
+    .header-main img{
+    	position: relative;
+    	bottom: auto;
+    }
+    .header-main ul {
+    	display: inline-block;
+    	position: relative;
+    	margin: 0 auto;
+    }
+}
 .header-main a:link, .header-main a:visited {
     color: #fff;
     text-decoration: none;
@@ -42,7 +62,7 @@ body {
     text-decoration: none;
 }
 .content-main {
-	width: 1130px;
+	width: 90%;
 	margin: 20px auto;
 	padding: 40px 30px 20px;
 	background-color: #fff;
@@ -85,7 +105,7 @@ body {
 	color: #333;
 }
 .content-main table {
-    width: 1120px;
+    width: 100%;
     height: 150px;
     text-align: left;
     font-size:12px;
@@ -96,7 +116,7 @@ body {
     background-color: #333;
     color: #fff;
     font-size: 14px;
-    font-weight: 800;
+    font-weight: 700;
     padding: 4px 5px;
 }
 .content-main td {
@@ -108,6 +128,21 @@ body {
 	font-weight: 700;
 	color: #000;
 }
+.content-form {
+	position: absolute;
+	top: 60px;
+	right: 20px;
+	width: 360px;
+}
+@media screen and (max-width: 900px) {
+	.content-form {
+		position: static;
+	}
+	.main {
+		margin: auto;
+		width: 100%;
+	}
+}
 .content-main form {
 	font-size: 15px;
 	color: #333;
@@ -115,7 +150,7 @@ body {
 }
 #form-left {
     float: left;
-    width: 400px;
+    width: 120px;
     height: 320px;
     margin-right: 14px;
     text-align: right;
@@ -134,7 +169,7 @@ body {
 	border-left: 3px solid #ccc;
 }
 .form-submit {
-	width: 1100px;
+	width: 100%;
 	height: 40px;
 	background-color: #3553cf;
 	color: #fff;
@@ -144,10 +179,15 @@ body {
 .form-submit:hover {
 	background-color: #0028cd;
 }
+.gallery {
+	overflow: auto;
+}
 .gallery-pic {
-	width: 120px;
-	height: 125px;
+	float: left;
+	width: 200px;
+	height: 200px;
 	border: 1px solid #cecece;
+	padding-top: 10px;
 	margin: 25px 0 25px 35px;
 	text-align: center;
 	font-size: 14px;
@@ -155,13 +195,13 @@ body {
 
 }
 .gallery-pic img {
-	width: 100px;
-	height: 80px;
+	width: 180px;
+	height: 140px;
 }
 .footer {
 	height: 70px;
 	background-color: #000;
-	min-width: 1200px;
+	width: 100%;
 	text-align: center;
 	color: #fff;
 	font-size: 14px;
