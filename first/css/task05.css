@@ -8,11 +8,11 @@ body {
 }
 .header {
 	background-color: #333333;
+	min-width: 240px;
 }
 .main {
 	margin-left: 2%;
 	margin-right: 460px;
-	min-width: 320px;
 }
 
 .header-main {
@@ -20,7 +20,6 @@ body {
 	margin: 0 auto;
 	width: 95%;
 	height: 60px;
-	min-width: 320px;
 }
 .header-main img{
     position: absolute;
