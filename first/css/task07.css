@@ -9,7 +9,8 @@ body {
 	position: relative;
 	min-width: 1200px;
 	margin: 0 auto;
-	overflow: auto;
+	overflow: hidden;
+	height: 54px;
 }
 .logo {
 	float: left;
