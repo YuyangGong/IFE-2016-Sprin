@@ -1,0 +1,718 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	min-width: 1200px;
+}
+.header {
+	position: relative;
+	min-width: 1200px;
+	margin: 0 auto;
+	overflow: auto;
+}
+.logo {
+	float: left;
+	cursor: pointer;
+	margin: 5px 0 13px 0;
+	padding-left: 60px;
+	font: 21px "SimHei";
+}
+.logo img {
+	margin-right: 10px;
+    position: relative;
+    top: 6px;
+}
+.nav ul {
+    float: right;
+    position: relative;
+    right: 140px;
+    list-style: none;
+    padding-top: 13px;
+}
+.nav li {
+	float: left;
+	font-size: 14px;
+	margin-left: -9px;
+	padding: 0px 0 15px 10;
+	font-family: "Microsoft YaHei";
+}
+.nav a:link, .nav a:visited {
+	color: #787b83;
+	padding: 13px 18px 18px 17px;
+	text-decoration: none;
+}
+.nav a:hover, .nav a:active {
+	color: #e74f4d;
+	border-bottom: 4px solid #e74f4d;
+}
+#first-link:link, #first-link:visited {
+	color: #e74f4d;
+	padding: 13px 18px 18px 17px;
+	border-bottom: 4px solid #e74f4d;
+}
+.login {
+	position: absolute;
+	right: 70px;
+	top: 12px;
+}
+.login img {
+	margin-right: 3px;
+	position: relative;
+	top: 3px;
+}
+.login a:link, .login a:visited {
+    font-size: 14px; 
+    font-family: "Microsoft YaHei";
+    color: #e74f4d;
+    text-decoration: none;
+}
+.login a:hover, .login a:active {
+    text-decoration: underline;
+}  
+.banner {
+	position: relative;
+	min-width: 1200px;
+	height: 690px;
+	overflow: hidden;
+}
+.banner img {
+	width: 100%;
+}
+.banner-cover {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 690px;
+    background-color: #000;
+    opacity: .2;
+}
+.banner-text{
+	position: absolute;
+	top: 210px;
+	left: 115px;
+	color: #fff;
+	font-family: "Microsoft YaHei";
+}
+.banner-text h4 {
+	font-size: 60px;
+	font-weight: 100;
+	margin-bottom: 10px;
+}
+.banner-text p {
+    font-size: 21px;
+    line-height: 32px;
+    color: #fffdfd;
+}
+.banner-botton {
+	width: 330px;
+	height: 60px;
+	background-color: #e74f4d;
+	margin-top: 60px;
+	font-size: 30px;
+	text-align: center;
+	border-radius: 5px;
+	line-height: 53px;
+	cursor: pointer;
+}
+.banner-botton:hover {
+	background-color: #ef3a37;
+}
+.target {
+	width: 1200px;
+	height: 250px;
+	margin: 0 auto;
+	text-align: center;
+	color: #767777;
+	font: 14px "SimHei";
+}
+
+.target-menu {
+	float: left;
+	margin-top: 45px;
+}
+.target-menu img {
+	margin-bottom: 45px;
+}
+.target-text {
+	width: 155px;
+	padding-right: 71px;
+	padding-left: 71px;
+	height: 50px;
+	border-right: 2px solid #aaa;
+}
+.target-menu .special-menu {
+	border-right: none;
+}
+.map {
+	min-width: 1200px;
+	position: relative;
+}
+.map img {
+	width: 100%;
+	height: 340px;
+}
+.map-cover {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 340px;
+	background-color: #aa3433;
+	opacity: .2;
+}
+.map-content {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	min-width: 1200px;
+    text-align: center;
+    color: #fff;
+}
+.map-text h3 {
+	margin-top: 45px;
+	font: normal 21px "Microsoft YaHei";
+}
+.map-text p {
+	font: normal 12px "Microsoft YaHei";
+	padding-top: 3px;
+}
+.map-line {
+	display: inline-block;
+	margin-bottom: 8px;
+	width: 30px;
+	height: 3px;
+	background-color: #fff;
+}
+.map-search {
+	margin-top: 50px;
+}
+.map-search input {
+	width: 235px;
+	height: 35px;
+	margin-left: 25px;
+	border: none;
+	color: #fff;
+	background-color: #be4e48;
+}
+.map-search select {
+	border: none;
+	-webkit-appearance:none;
+	   -moz-appearance:none;
+	        appearance:none;
+    background: url("../img/task07/task07-select2.png") no-repeat scroll right center #fff;
+	padding-left: 6px;
+	font: 12px "Microsoft YaHei";
+	color: #a8aaaa;
+	width: 235px;
+	height: 35px;
+	margin-left:25px;
+}
+.map-search option {
+	height: 28px;
+	padding: 10px 0 0 30px;
+	background-color: #e3e3e4;
+	color: #666;
+}
+.map-search option:hover {
+	color: #fff;
+	background: url("../img/task07/task07-select1.png") no-repeat scroll 24% center #be4e48;
+}
+.map-search select:hover {
+	cursor: pointer;
+	box-shadow: 1px 1px 5px #be4e48;
+}
+.map-search input:hover {
+	cursor: pointer;
+	background-color: #d45048;
+}
+.unknow {
+	min-width: 1200px;
+	height: 360px;
+	position: relative;
+	background-color: #ededec;
+	text-align: center;
+}
+.unknow img {
+	margin: 80px auto 45px auto;
+}
+.unknow p {
+	font: 54px "SimHei";
+	color: #867e7a;
+}
+.gallery {
+	min-width: 1200px;
+	background-color: #f7f7f7;
+	height: 500px;
+	text-align: center;
+	overflow: hidden;
+	padding-top: 100px;
+}
+.gallery-sum {
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.gallery-pic {
+	display: table-cell;
+	width: 300px;
+}
+.gallery-pic h4 {
+	font: normal 16px "Microsoft YaHei";
+	margin: 5px auto 3px;
+	color: #323333;
+}
+.gallery-pic p {
+	font: normal 13px "Microsoft YaHei";
+	color: #786f6c;
+}
+.gallery-pic img {
+	padding: 12px 8px;
+	width: 200px;
+	height: 310px;
+	border: 1px solid #d9d5d4;
+	box-shadow: 1px 1px 5px #d9d5d4
+}
+.spacial-gallery {
+	position: relative;
+	top: -310px;
+}
+#shanghai {
+	color: #000;
+	margin-left: 30px;
+	letter-spacing: 30px;
+	font-size: 24px;
+}
+#shanghai:hover {
+	color: #e74f4d;
+}
+#shanghai-text {
+	color: #786f6c;
+	margin-bottom: 5px;
+}
+.gallery-pic h4:hover {
+	cursor: pointer;
+	color: #e74f4d;
+}
+.world {
+	position: relative;
+	min-width: 1200px;
+	font: 12px "Microsoft YaHei";
+	height: 565px;
+}
+.world-banner {
+	display: inline-block;
+	position: relative;
+	width: 67%;
+	color: #fff;
+}
+.world-banner img{
+	margin-left: -1px;
+	width: 100%;
+	height: 565px;
+}
+.world-banner-text { 
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%); 
+	   -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); 		
+         -o-transform: translate(-50%, -50%); 
+            transform: translate(-50%, -50%);	
+}
+.world-banner-text h2 {
+	font-size: 50px;
+	font-weight: normal;
+}
+.world-banner-text h1 {
+	margin: -35px 0 -10px 0;
+	font-size: 158px;
+	font-weight: normal;
+}
+.world-banner-text h3, .world-banner-text h4 {
+	font-size: 22px;
+	font-weight: normal;
+}
+.world-text {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 33%;
+	text-align: center;
+}
+.text-sum {
+	position: relative;
+	width: 290px;
+	margin: 0 auto;
+}
+.world-text p {
+	font: 12px "SimSun";
+	color: #aaaaaa;
+	text-align: left;
+	margin-bottom: 35px;
+	letter-spacing: 1px;
+	line-height: 28px;
+}
+.world-text p:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.world-text-title {
+	margin-top: 150px;
+	margin-bottom: 20px;
+}
+.world-text-title span {
+	font: bold 20px "SimSun";
+	color: #323333;
+	margin: 0 12px;
+}
+.world-text-title span:first-child:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.text-char {
+	position: absolute;
+	width: 28px;
+	height: 1px;
+	border-top: 2px solid #766d6a;
+	left: 150px;
+	top: 10px;
+	-webkit-transform:rotate(-45deg); 
+	-moz-transform:rotate(-45deg);
+	-ms-transform:rotate(-45deg); 
+	-o-transform:rotate(-45deg);
+	transform:rotate(-45deg);
+}
+.world-text-title span + span {
+	font: bold 20px "SimHei";
+	color: #e74f4d;
+}
+.world-title-char {
+	position: absolute;
+	left:-20px;
+	top: 270px;
+	width: 0;
+	height: 0;
+	border-right: 22px solid #fff;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+}
+.world-bottom {
+	display: inline-block;
+	color: #e46868;
+	padding: 10px 30px;
+	cursor: pointer;
+	border: 1px solid #e46868;
+	border-radius: 5px;
+}
+.world-cycle-sum {
+	margin-top: 18px;
+}
+.world-cycle {
+	display: inline-block;
+    margin: 0 6px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	border: 1px solid #929292;
+	cursor: pointer;
+}
+.world-cycle:first-child {
+	background-color: #929292;
+}
+.world-cycle:hover {
+	background-color: #929292;
+}
+.world-bottom:hover {
+    color: white;
+    background-color: #e46868;
+}
+.new {
+	position: relative;
+	min-width: 1200px;
+	height: 520px;
+}
+.new-banner {
+	display: inline-block;
+	position: relative;
+	overflow: auto;
+	height: 520px;
+	width: 33%;
+	text-align: center;
+}
+.new-left {
+	color: white;
+	background-color: #e74f4d;
+}
+.new-text {
+	margin-top: 160px;
+}
+.new-text p {
+	margin-top: 5px;
+	font: 21px "SimHei";
+}
+.line {
+	display: inline-block;
+	margin: 20px 0 20px;
+	width: 30px;
+	height: 2px;
+	background-color: white;
+}
+.new-bottom {
+	display: inline-block;
+	font: 21px "SimHei";
+	padding: 12px 40px;
+	cursor: pointer;
+	border: 1px solid #fff;
+	border-radius: 10px;
+}
+.first-bottom:hover {
+	color: #e74f4d;
+	background-color: #fff;
+}
+.second-line {
+	background-color: #abaaaa;  
+}
+.second-bottom {
+	color: #e74f4d;
+	border: 1px solid #e74f4d;
+}
+.second-bottom:hover {
+	color: #fff;
+	background-color: #e74f4d;
+}
+.new-right {
+	position: absolute;
+	width: 33%;
+	right: 0;
+	top: 0;
+	height: 520px;
+	margin-left: 3px;
+}
+.new-right img {
+	width: 100%;
+	height: 520px;
+}
+.new-black {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 520px;
+	background-color: #000;
+	opacity: .4;
+}
+.new-char {
+	position: absolute;
+	left:0px;
+	top: 270px;
+	width: 0;
+	height: 0;
+	border-left: 22px solid #fff;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+}
+.form {
+	min-width: 1200px;
+}
+.form-title {
+	padding: 120px;
+	width: 960px;
+	margin: 0 auto;
+	text-align: center;
+    height: 180px;
+    overflow: auto;
+}
+.form-title h3 {
+	font: 21px "SimHei";
+	color: #323333;
+}
+.form-title p {
+	font: 12px "Microsoft YaHei";
+	color: #aaaaaa;
+}
+.form-title-line {
+	display: inline-block;
+	margin: -5px 0 8px 0;
+	width: 30px;
+	height: 2px;
+	background-color: #e74f4d;
+}
+.form-content {
+	position: relative;
+	width: 1200px;
+	margin: -100px auto 130px auto;
+	overflow: auto;
+}
+.form-info {
+	float: left;
+	width: 300px;
+	padding-left: 120px;
+}
+.form-div {
+	position: relative;
+	width: 290px;
+	padding-bottom: 50px;
+}
+.form-div h3{
+	font: normal 14px "SimHei";
+	color: #333;
+}
+.form-div p {
+	margin: 15px 0 -4px 0;
+	font: 12px "SimSun";
+	color: #aaa;
+}
+.form-footer {
+	position: absolute;
+	right: 0;
+}
+.form-footer:hover {
+	cursor: pointer;
+}
+.form-arrow {
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	border-right: 2px solid #aaa;
+	border-bottom: 2px solid #aaa;
+	-webkit-transform:rotate(45deg);
+	   -moz-transform:rotate(45deg); 
+	    -ms-transform:rotate(45deg); 
+	     -o-transform:rotate(45deg); 
+	        transform:rotate(45deg);
+}
+.form-arrow:hover {
+	border-color: red;
+}
+.more {
+	display: inline-block;
+	font: 12px "SimSun";
+	color: #aaa;
+}
+.more:hover {
+	text-decoration: underline;
+}
+.form-text {
+	float: right;
+	width: 700px;
+}
+.form-text input {
+	border: none;
+	background-color: #ededee;
+	width: 310px;
+	height: 40px;
+	margin: 6px 8px;
+	border-radius: 5px;
+}
+.form-text textarea {
+	border: none;
+	background-color: #ededee;
+	width: 640px;
+	height: 100px;
+	margin-left: 8px;
+	border-radius: 5px;
+	margin-top: 7px;
+	font-size: 13px;
+	padding-top: 10px;
+}
+.form-text input:hover {
+	box-shadow: 1px 1px 4px blue;
+}
+.form-text textarea:hover {
+    box-shadow: 1px 1px 4px blue;
+}
+#form-submit {
+	width: 640px;
+	height: 40px;
+}
+#form-submit:hover {
+	cursor: pointer;
+	background-color: #6f8eff;
+	color: #fff;
+}
+.mail {
+	position: relative;
+	text-align: center;
+	min-width: 1200px;
+	height: 350px;
+	background-color: #32353e;
+	color: #e0dede;
+}
+.mail-title {
+	font: 21px "SimHei";
+	color: #fff;
+	padding-top: 90px;
+}
+.mail-content {
+	margin: 8px 0 30px 0;
+	font: 12px "SimSun";
+}
+#form-text {
+	height: 40px;
+	width: 430px;
+}
+#form-text:hover {
+	box-shadow: 1px 1px 4px blue;
+}
+#submit {
+	color: #e0dcdd;
+	font: 15px "Microsoft YaHei";
+	position: relative;
+	top: 1px;
+	left: -8px;
+	background-color: #686166;
+	height: 42px;
+	width: 80px;
+	border: none;
+	cursor: pointer;
+}
+#submit:hover {
+	background-color: #455fbf;
+}
+.mail-icon {
+	margin-top: 35px;
+}
+.mail-icon img {
+	margin: 0 12px;
+}
+.mail-icon img:hover, .mail-icon img:active {
+	opacity: 0.6;
+}	
+.footer {
+	position: relative;
+	color: white;
+	background-color: #2f3038;
+	height: 60px;
+	min-width: 1200px;
+}
+.copyright {
+	position: absolute;
+	left: 100px;
+	bottom: 15px;
+	font: 12px "SimSun";
+	color: #cfcacb;
+}
+.copyright a:link, .copyright a:visited {
+	color: white;
+	text-decoration: none;
+}
+.copyright a:hover, .copyright a:active {
+	color: white;
+	text-decoration: underline;
+}
+.back-top {
+	position: absolute;
+	right: 40px;
+	bottom: 15px;
+	font: 12px "SimSun";
+}
+.back-top a:link, .back-top a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+.back-top a:hover, .back-top a:active {
+	color: #999;
+	text-decoration: underline;
+}
