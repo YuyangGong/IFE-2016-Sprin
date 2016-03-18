@@ -15,7 +15,7 @@ body {
 .logo {
 	float: left;
 	cursor: pointer;
-	margin: 5px 0 13px 0;
+	margin: 5px 0 0 0;
 	padding-left: 60px;
 	font: 21px "SimHei";
 }
@@ -35,7 +35,7 @@ body {
 	float: left;
 	font-size: 14px;
 	margin-left: -9px;
-	padding: 0px 0 15px 10;
+	padding: 0px 0 0 10px;
 	font-family: "Microsoft YaHei";
 }
 .nav a:link, .nav a:visited {
@@ -208,6 +208,7 @@ body {
 	height: 35px;
 	margin-left:25px;
 }
+select::-ms-expand { display: none;}
 .map-search option {
 	height: 28px;
 	padding: 10px 0 0 30px;
@@ -598,14 +599,16 @@ body {
 .form-text {
 	float: right;
 	width: 700px;
+	overflow: hidden;
 }
 .form-text input {
 	border: none;
 	background-color: #ededee;
-	width: 310px;
+	width: 255px;
 	height: 40px;
 	margin: 6px 8px;
 	border-radius: 5px;
+	padding-left: 55px;
 }
 .form-text textarea {
 	border: none;
@@ -624,7 +627,17 @@ body {
 .form-text textarea:hover {
     box-shadow: 1px 1px 4px blue;
 }
+.form-text label {
+    position: relative;
+}
+.form-text span {
+	color: #555;
+	position: absolute;
+	top: 0;
+	left: 20px;
+}
 #form-submit {
+	padding-left: 0;
 	width: 640px;
 	height: 40px;
 }
