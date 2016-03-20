@@ -1,0 +1,46 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.container div {
+	flex: none;
+	padding: 20px;
+	width: 150px;
+	border: 1px solid red;
+}
+.iterm1 {
+	height: 120px;
+}
+.iterm2 {
+	height: 100px;
+}
+.iterm3 {
+	height: 40px;
+}
+.container .iterm4 {
+	border: 1px solid blue;
+	height: 200px;
+}
+@media screen and (max-width: 640px) {
+	.container {
+		align-items: flex-start;
+		flex-wrap: wrap
+	}
+	.iterm4 {
+		order: 1;
+	}
+	.iterm2 {
+		order: 2;
+	}
+	.iterm1 {
+		order: 3;
+	}
+	.iterm3 {
+		order: 4;
+	}
+}

@@ -10,7 +10,7 @@
 	overflow: auto;
 }
 .container div {
-	box-sizing: content-box;
+	box-sizing: border-box;
 }
 .container > div {
 	float: left;
