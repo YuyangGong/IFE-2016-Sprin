@@ -1,0 +1,152 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+:root {         /*匹配文档根元素，即html*/
+	padding: 20px;
+}
+::selection {  /*修改文字选中时候的样式*/
+	color: #fff;
+	background-color: #000;
+}
+::-moz-selection { /*同上，兼容火狐*/
+	color: #fff;
+	background-color: #000;
+}
+tr {
+	color: red;
+}
+tr + tr + tr + tr + tr { /*匹配第五行开始的行*/
+	color: #000;
+}
+tr:nth-child(odd) {
+	background-color: #ccc;
+}
+tr:first-child {
+	/* 等同与CSS3另一个伪类选择器，nth-of-type(1)*/
+	font-weight: bold;
+	background-color: #000;
+	color: #fff;
+	text-shadow: 4px 4px 8px blue;
+	/*css3文本阴影*/
+}
+td:last-child {   /*与设计稿不符，只是为了尝试使用CSS3 :last-child伪类*/
+	/* 等同与CSS3另一个伪类选择器，nth-last-of-type(1)*/
+	font-weight: bold;
+}
+td:nth-of-type(2) {  /*选中第二个td修改其左右border*/
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	text-align: left;
+}
+input {
+	margin: 20px 0;
+	width: 200px;
+	height: 50px;
+}
+@keyframes myfirst {
+0% {width:200px;height:50px;}
+50% {width:500px;height:150px;}
+100% {width:200px;height:50px;}
+}
+@-moz-keyframes myfirst {
+0% {width:200px;height:50px;}
+50% {width:500px;height:150px;}
+100% {width:200px;height:50px;}
+}
+@-webkit-keyframes myfirst {
+0% {width:200px;height:50px;}
+50% {width:500px;height:150px;}
+100% {width:200px;height:50px;}
+}
+@-o-keyframes myfirst {
+0% {width:200px;height:50px;}
+50% {width:500px;height:150px;}
+100% {width:200px;height:50px;}
+}
+input:focus {
+	box-shadow: 2px 2px 5px blue;
+	animation:myfirst 3s;
+	-moz-animation:myfirst 3s; 
+	-webkit-animation:myfirst 3s; 
+	-o-animation:myfirst 3s; 
+}
+h1 {
+	margin-bottom: 20px;
+	font-size: 14px;
+	width: 100px;
+	height: 100px;
+	background-color: yellow;
+	transition:width 2s, height 2s, background-color 2s;
+	-moz-transition:width 2s, height 2s, background-color 2s, -moz-transform 2s; 
+	-webkit-transition:width 2s, height 2s, background-color 2s, -webkit-transform 2s; 
+	-o-transition:width 2s, height 2s, background-color 2s, -o-transform 2s;
+}
+h1:hover {
+	width: 250px;
+	height: 250px;
+	background-color: blue;
+	transform:rotate(360deg);
+	-moz-transform:rotate(360deg); 
+	-webkit-transform:rotate(360deg); 
+	-o-transform:rotate(360deg); 
+}
+h1 + div {
+	width: 300px;
+	overflow: hidden;
+}
+ul {
+	position: relative;
+	left: 0;
+	list-style: none;
+	height: 150px;
+	width: 300%;
+	transition: left 1s ease-in-out;
+	-moz-transition: left 1s ease-in-out; 
+	-webkit-transition: left 1s ease-in-out; 
+	-o-transition: left 1s ease-in-out;
+}
+li {
+	background-color: green;
+	float: left;
+	width: 300px;
+	height: 150px;
+}
+li + li {
+	background-color: blue;
+}
+li + li + li {
+	background-color: yellow;
+}
+body>div:last-child {
+	font-size: 15px;
+	position: relative;
+	text-align: right;
+	top: -20px;
+	width: 300px;
+	height: 30px;
+}
+div div {
+	background-color: rgba(255,255,255,.2);
+	display: inline-block;
+	text-align: center;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+a:link, a:visited {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	color: #fff;
+	text-decoration: none;
+}
+#banner1:target~ul {
+	left: 0;
+}
+#banner2:target~ul {
+	left: -100%;
+}
+#banner3:target~ul {
+	left: -200%;
+}
