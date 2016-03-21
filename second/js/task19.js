@@ -10,13 +10,25 @@ function addEvent(elem,type,func){ //兼容浏览器差异
 	}
 }
 window.onload=function(){
+	var arr=[];   //初始放60个数字
+	for(var num=90;num>30;num--){
+		arr.push(num);
+	}
 	var list={   //留个接口
-		queue:[3,2], //队列
-		push:function(num){ //左侧入  
+		queue:arr, //队列
+		push:function(num){ //左侧入 
+		 	if(this.queue.length>=60){
+		 		alert("太多了，不能再加了");
+		 		return false;
+		 	}
 			this.queue.push(num);
 			this.paint();
 		},
 		unshift:function(num){ //右侧入
+			if(this.queue.length>=60){
+		 		alert("太多了，不能再加了");
+		 		return false;
+		 	} 
 			this.queue.unshift(num);
 			this.paint();
 		},
@@ -45,7 +57,7 @@ window.onload=function(){
 			this.paint();
 		},
 		paint:function(){   //重绘
-			var str=list.queue.reduce(function(s,v){return s+"<div>"+v+"</div>"},"");
+			var str=list.queue.reduce(function(s,v){return s+"<div style='height:"+v+"px'></div>"},"");
 			container.innerHTML=str;
 			addDivEvent();
 		}
@@ -65,19 +77,38 @@ window.onload=function(){
 	//以下为左右侧入，侧出按钮绑定事件。
 	botton[2].onclick=function(){
 		var num=botton[0].value;
-		if(/^\d+$/.test(num)){
+		if(/^([1-9][0-9]|100)$/.test(num)){
 			list.push(num);
 		}
-		else alert("请输入正确的整数！");
+		else alert("请输入范围在10-100的整数!");
 	}
 	botton[1].onclick=function(){
 		var num=botton[0].value;
-		if(/^\d+$/.test(num)){
+		if(/^([1-9][0-9]|100)$/.test(num)){
 			list.unshift(num);
 		}
-		else alert("请输入正确的整数！");
+		else alert("请输入范围在10-100的整数！");
 	}
+	var timeStart;
 	botton[3].onclick=list.shift;
 	botton[4].onclick=function(){list.pop();};
+	botton[5].onclick=function(){
+		timeStart=setInterval(timing,50);
+	}
+	function timing(){
+		for(var i=0;i<list.queue.length-1;i++){
+			for(var j=list.queue.length-1;j>i;j--){
+				if(list.queue[j]<list.queue[j-1]){
+					list.queue[j]=list.queue[j]^list.queue[j-1];//异或交换，当然也可以用个中间数或者加减交换。
+					list.queue[j-1]=list.queue[j]^list.queue[j-1];
+					list.queue[j]=list.queue[j]^list.queue[j-1];
+					list.paint();
+					return false;
+				}
+			}
+		}
+		clearTimeout(timeStart);
+	}
+	list.paint();
 	addDivEvent();
 }
