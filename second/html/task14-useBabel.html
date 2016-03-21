@@ -22,22 +22,25 @@ var aqiData = [
   ["成都", 90],
   ["西安", 100]
 ];
-( () => {
+"use strict";
+(function () {
   /*
   在注释下方编写代码
   遍历读取aqiData中各个城市的数据
   将空气质量指数大于60的城市显示到aqi-list的列表中
   */
-  //ES6语法书写，如有需要可以通过Babel转成ES5
-  let lists=document.getElementById("aqi-list");
-  aqiData.filter(city => city[1]>=60).sort((a,b)=>b[1]-a[1]).forEach((city,i) => {
-    let str=`第${i+1}名: ${city[0]},${city[1]}`;
-    let li=document.createElement("li");
-    li.appendChild(document.createTextNode(str))
+  var lists = document.getElementById("aqi-list");
+  aqiData.filter(function (city) {
+    return city[1] >= 60;
+  }).sort(function (a, b) {
+    return b[1] - a[1];
+  }).forEach(function (city, i) {
+    var str = "第" + (i + 1) + "名: " + city[0] + "," + city[1];
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode(str));
     lists.appendChild(li);
-  })
+  });
 })();
-
 </script>
 </body>
 </html>

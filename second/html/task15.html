@@ -36,7 +36,7 @@ const addEvent=(elem,type,func)=>{ //兼容浏览器差异
     elem["on"+type]=func;
   }
 }
-(function(){
+(()=>{
   let text=document.getElementById("source").innerHTML;
   let resort=document.getElementById("resort");
   let listsText=text.split("\n")
@@ -45,7 +45,7 @@ const addEvent=(elem,type,func)=>{ //兼容浏览器差异
                 .map((a,i)=>a.replace(/\<li\>/,`\<li\>第${i+1}名: `))//加入名次
                 .join(""); //转化成字符串；
   let btn=document.getElementById("sort-btn");
-  addEvent(btn,"click",function(){
+  addEvent(btn,"click",(){
     resort.innerHTML=listsText;
   })
 })()

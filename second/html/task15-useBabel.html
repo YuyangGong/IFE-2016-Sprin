@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>task-15</title>    
+<link rel="shortcut icon" href="../img/favicon.ico">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+</head>
+<body>
+  <ul id="source">
+    <li>北京空气质量：<b>90</b></li>
+    <li>上海空气质量：<b>70</b></li>
+    <li>天津空气质量：<b>80</b></li>
+    <li>广州空气质量：<b>50</b></li>
+    <li>深圳空气质量：<b>40</b></li>
+    <li>福州空气质量：<b>32</b></li>
+    <li>成都空气质量：<b>90</b></li>
+  </ul>
+  <ul id="resort">
+    <!-- 
+    <li>第一名：北京空气质量：<b>90</b></li>
+    <li>第二名：北京空气质量：<b>90</b></li>
+    <li>第三名：北京空气质量：<b>90</b></li>
+     -->
+  </ul>
+  <button id="sort-btn">排序</button>
+<script type="text/javascript">
+"use strict";
+
+var addEvent = function addEvent(elem, type, func) {
+  //兼容浏览器差异
+  if (elem.addEventListener) {
+    elem.addEventListener(type, func);
+  } else if (elem.attachEvent) {
+    elem.attachEvent("on" + type, func);
+  } else {
+    elem["on" + type] = func;
+  }
+};
+(function () {
+  var text = document.getElementById("source").innerHTML;
+  var resort = document.getElementById("resort");
+  var listsText = text.split("\n").filter(function (a) {
+    return a;
+  }) //祛除前后的空字符串；
+  .sort(function (a, b) {
+    return b.match(/\d+/) - a.match(/\d+/);
+  }) //排序；
+  .map(function (a, i) {
+    return a.replace(/\<li\>/, "<li>第" + (i + 1) + "名: ");
+  }) //加入名次
+  .join(""); //转化成字符串；
+  var btn = document.getElementById("sort-btn");
+  addEvent(btn, "click", function () {
+    resort.innerHTML = listsText;
+  });
+})();
+</script>
+</body>
+</html>
