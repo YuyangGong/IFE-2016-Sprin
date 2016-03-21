@@ -23,6 +23,7 @@ var aqiData = [
   ["西安", 100]
 ];
 "use strict";
+
 (function () {
   /*
   在注释下方编写代码
@@ -30,6 +31,7 @@ var aqiData = [
   将空气质量指数大于60的城市显示到aqi-list的列表中
   */
   var lists = document.getElementById("aqi-list");
+  var newLists = document.createDocumentFragment();
   aqiData.filter(function (city) {
     return city[1] >= 60;
   }).sort(function (a, b) {
@@ -38,8 +40,9 @@ var aqiData = [
     var str = "第" + (i + 1) + "名: " + city[0] + "," + city[1];
     var li = document.createElement("li");
     li.appendChild(document.createTextNode(str));
-    lists.appendChild(li);
+    newLists.appendChild(li);
   });
+  lists.appendChild(newLists);
 })();
 </script>
 </body>
