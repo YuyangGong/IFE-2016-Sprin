@@ -17,6 +17,10 @@ window.onload=function(){
 	var list={   //留个接口
 		queue:arr, //队列
 		push:function(num){ //左侧入 
+			if(btnClick){
+				alert("正在排序呢！");
+				return false;
+			}
 		 	if(this.queue.length>=60){
 		 		alert("太多了，不能再加了");
 		 		return false;
@@ -25,6 +29,10 @@ window.onload=function(){
 			this.paint();
 		},
 		unshift:function(num){ //右侧入
+			if(btnClick){
+				alert("正在排序呢！");
+				return false;
+			}
 			if(this.queue.length>=60){
 		 		alert("太多了，不能再加了");
 		 		return false;
@@ -33,6 +41,10 @@ window.onload=function(){
 			this.paint();
 		},
 		pop:function(){ //左侧出
+			if(btnClick){
+				alert("正在排序呢！");
+				return false;
+			}
 			//本来内置函数想用this的，可是绑定上事件之后其this指向的对象就变了，指向按钮.
 			//如果想直接用this,而不是list的话，可以在绑定的时候放进一个匿名函数里调用，避免this的指向改变。
 			//list.shift方法用的以上原理，所以其可以直接用this;
@@ -44,6 +56,10 @@ window.onload=function(){
 			list.paint();
 		},
 		shift:function(){  //右侧出
+			if(btnClick){
+				alert("正在排序呢！");
+				return false;
+			}
 			//这个this的指向就没有改变。详细看最后俩个函数的绑定异同。
 			if(list.queue.length===0){
 				alert("队列没有数字拉！亲");
@@ -53,6 +69,10 @@ window.onload=function(){
 			list.paint();
 		},
 		del:function(num){  //删除指定的序号
+			if(btnClick){
+				alert("正在排序呢！");
+				return false;
+			}
 			this.queue.splice(num,1);
 			this.paint();
 		},
@@ -89,25 +109,44 @@ window.onload=function(){
 		}
 		else alert("请输入范围在10-100的整数！");
 	}
-	var timeStart;
 	botton[3].onclick=list.shift;
 	botton[4].onclick=function(){list.pop();};
 	botton[5].onclick=function(){
-		timeStart=setInterval(timing,50);
+		try {
+			timing()();
+		}
+		catch(e){
+			alert("正在排序呢！")
+		}
 	}
+	var btnClick=false;
 	function timing(){
-		for(var i=0;i<list.queue.length-1;i++){
-			for(var j=list.queue.length-1;j>i;j--){
-				if(list.queue[j]<list.queue[j-1]){
+		if(btnClick)return false;
+		btnClick=true;
+		var i=0,j=1,delay=false;;
+		return function listTime(){
+			if(list.queue[j]<list.queue[j-1]){
 					list.queue[j]=list.queue[j]^list.queue[j-1];//异或交换，当然也可以用个中间数或者加减交换。
 					list.queue[j-1]=list.queue[j]^list.queue[j-1];
 					list.queue[j]=list.queue[j]^list.queue[j-1];
 					list.paint();
+				    delay=true;
+				}
+			j++;
+			if(j===list.queue.length-i){
+				i+=1;
+				j=1;
+				if(i===list.queue.length-1){
+					btnClick=false;
 					return false;
 				}
 			}
-		}
-		clearTimeout(timeStart);
+			if(delay){
+				delay=false;
+				setTimeout(listTime,20);
+			}
+			else listTime();
+		}		
 	}
 	list.paint();
 	addDivEvent();

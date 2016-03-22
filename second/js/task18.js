@@ -1,22 +1,11 @@
-function addEvent(elem,type,func){ //兼容浏览器差异
-	if(elem.addEventListener){
-		elem.addEventListener(type,func);
-	}
-	else if(elem.attachEvent){
-		elem.attachEvent("on"+type,func);
-	}
-	else {
-		elem["on"+type]=func;
-	}
-}
 window.onload=function(){
 	var list={   //留个接口
 		queue:[3,2], //队列
-		push:function(num){ //左侧入  
+		push:function(num){ //右侧入  
 			this.queue.push(num);
 			this.paint();
 		},
-		unshift:function(num){ //右侧入
+		unshift:function(num){ //左侧入
 			this.queue.unshift(num);
 			this.paint();
 		},
