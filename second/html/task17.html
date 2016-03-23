@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>task-17</title>    
+<link rel="shortcut icon" href="../img/favicon.ico">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<script src="../js/task17.js"></script>
+<style>
+* {
+    padding: 0;
+    margin: 0;
+}
+fieldset {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 5px 10px;
+}
+body > div {
+    display: flex;
+    align-items: flex-end;
+    margin: 30px auto 0;
+    justify-content: center;
+    text-align: center;
+    width: 1000px;
+    height: 500px;
+    border: 1px solid #aaa;
+}
+div div {
+    margin:1px;
+}
+</style>
+</head>
+<body>
+  <fieldset id="form-gra-time">
+    <legend>请选择日期粒度：</legend>
+    <label>日<input name="gra-time" value="day" type="radio" checked="checked"></label>
+    <label>周<input name="gra-time" value="week" type="radio"></label>
+    <label>月<input name="gra-time" value="month" type="radio"></label>
+  </fieldset>
+  <fieldset>
+    <legend>请选择查看的城市：</legend>
+    <select id="city-select">
+      <option>北京</option>
+      <option>上海</option>
+      <option>广州</option>
+      <option>深圳</option>
+      <option>成都</option>
+      <option>西安</option>
+      <option>福州</option>
+      <option>厦门</option>
+      <option>沈阳</option>
+    </select>
+  </fieldset>
+  <div id="aqi-chart-wrap">
+  </div>
+</body>
+</html>
