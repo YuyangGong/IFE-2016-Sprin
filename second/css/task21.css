@@ -1,0 +1,54 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	padding: 10px;
+}
+body > div {
+	margin: 10px;
+}
+body > div:first-child input {
+	width: 300px;
+}
+#hobbyBtn {
+	background-color: #fff;
+	border: 1px solid #aaa;
+	cursor: pointer;
+	border-radius: 5px;
+}
+#tagContainer {
+	height: 50px;
+}
+#tagContainer div {
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	color: #fff;
+	background-color: blue;
+	margin-left: 10px;
+	padding: 5px;
+}
+#tagContainer div:hover {
+	background-color: red;
+	cursor: pointer;
+}
+#tagContainer div:hover:before {
+	content: "点击删除";
+}
+#hobbyContainer div {
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	color: #fff;
+	background-color: #ab2;
+	margin-left: 10px;
+	padding: 5px;
+}
+#hobbyContainer div:hover {
+	background-color: red;
+	cursor: pointer;
+}
+#hobbyContainer div:hover:before {
+	content: "点击删除";
+}
