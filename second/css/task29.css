@@ -1,0 +1,35 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body > div {
+	float: left;
+	margin: 30px 10px;
+}
+body > div:first-child {
+	font-size: 17px;
+	line-height: 35px;
+	color: #333;
+}
+body > div:first-child + div input {
+	width: 240px;
+	height: 35px;
+	border-radius: 5px;
+	border: 1px solid #bbb;
+}
+body > div + div + div input {
+	width: 80px;
+	height: 35px;
+	border: none;
+	color: #fff;
+	background-color: #2e78b9;
+	border-radius: 5px;
+	cursor: pointer;
+}
+body > div + div + div input:hover {
+	background-color: #4a9de6;
+}
+#warning {
+	font-size: 14px;
+	color: #aaa;
+}
