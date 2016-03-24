@@ -114,7 +114,7 @@ window.onload=function(){
 		});
 		addEvent(passwordAgain,"focus",function(){
 			againWarn.innerHTML="请再次输入密码";
-			focusIn(passwordAgain,passwordWarn);
+			focusIn(passwordAgain,againWarn);
 		});
 		addEvent(passwordAgain,"blur",function(){
 			againWarn.innerHTML=check.checkAgain(passwordAgain.value);
