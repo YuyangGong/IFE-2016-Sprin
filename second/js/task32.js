@@ -134,17 +134,17 @@ window.onload=function(){
 		str+='<tr><td></td><td><input type="button" value="提交" id="submit"></td></tr>';
 		form.innerHTML=str;
 		(function(){ 
-		var names=document.getElementById("name");
-		var nameWarn=document.getElementById("nameWarn");
-		var password=document.getElementById("password");
-		var passwordWarn=document.getElementById("passwordWarn");
-		var passwordAgain=document.getElementById("passwordAgain")
-		var againWarn=document.getElementById("passwordAgainWarn");
-		var email=document.getElementById("email");
-		var emailWarn=document.getElementById("emailWarn");
-		var phone=document.getElementById("phone");
-		var phoneWarn=document.getElementById("phoneWarn");
-		var submit=document.getElementById("submit");
+		var names=$("name");
+		var nameWarn=$("nameWarn");
+		var password=$("password");
+		var passwordWarn=$("passwordWarn");
+		var passwordAgain=$("passwordAgain")
+		var againWarn=$("passwordAgainWarn");
+		var email=$("email");
+		var emailWarn=$("emailWarn");
+		var phone=$("phone");
+		var phoneWarn=$("phoneWarn");
+		var submit=$("submit");
 		function focusIn(input,text){
 			text.style.color="#aaa";
 			input.style.borderColor="#ccc";
