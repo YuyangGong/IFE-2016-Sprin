@@ -25,9 +25,9 @@
 		var root=document.getElementsByClassName("root")[0];
 		var radio=document.getElementsByTagName("input");
 		var btn=document.getElementById("btn");
+		frontRoot(root);
 		btn.onclick=function(){
 			if(radio[0].checked){
-				frontRoot(root);
 				throughArr(frontArr);
 			}
 			else if(radio[1].checked){
