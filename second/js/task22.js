@@ -1,11 +1,11 @@
-(function(){
+﻿(function(){
 	var frontArr=[];    //前序遍历的顺序数组
 	function frontRoot(root){  	//获得前序遍历的数组;
 		frontArr.push(root);
 		var arr=root.childNodes;
 		for(var i=0;i<arr.length;i++){
 			if(arr[i].nodeType===1){
-				frontRoot(arr[[i]]);
+				frontRoot(arr[i]);
 			}
 		}
 	}

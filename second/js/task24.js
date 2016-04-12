@@ -1,4 +1,4 @@
-(function(){
+﻿(function(){
 	var frontArr=[];    //前序遍历的顺序数组
 	var searchNode;     //用来放搜索到的节点，当重新搜索时方便去除标记颜色。
 	var isGoing=false;  //用来判断是否已经在进行搜索了
@@ -7,7 +7,7 @@
 		var arr=root.childNodes;
 		for(var i=0;i<arr.length;i++){
 			if(arr[i].nodeType===1){
-				frontRoot(arr[[i]]);
+				frontRoot(arr[i]);
 			}
 		}
 	}
